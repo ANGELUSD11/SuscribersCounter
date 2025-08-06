@@ -1,0 +1,41 @@
+    @keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+    
+    body {
+      display: flex;
+      flex-direction: column;  
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #11e6e6, rgb(25, 117, 117), #001612);
+      background-size: 300% 300%;
+      animation: gradientBackground 15s ease infinite;
+      height: 100vh;
+      margin: 0;
+      padding-top: 1px;
+      overflow: hidden;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-family: 'Jersey 10', serif;
+      color: aqua;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 1.2);
+    }
+    
+    .count {
+      font-size: 5rem;
+      color: rgb(175, 243, 243);
+      font-family: 'Jersey 10', serif;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 1.2);
+    }
