@@ -29,6 +29,3 @@ def get_subscriber_count():
 def index():
     suscribers_count = get_subscriber_count()
     return render_template('index.html', suscribers_count=suscribers_count)
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
