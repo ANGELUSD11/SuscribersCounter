@@ -24,11 +24,11 @@ def get_subscriber_count():
         return int(data["items"][0]["statistics"]["subscriberCount"])
     except (KeyError, IndexError):
         return None
-    
-@app.route('/', methods=['GET'])
+
+@app.route('/')
 def index():
     suscribers_count = get_subscriber_count()
     return render_template('index.html', suscribers_count=suscribers_count)
 
-def handler(environ, start_response):
-    return app.wsgi_app(environ, start_response)
+if __name__ == '__main__':
+    app.run(debug=False, port=8000)
